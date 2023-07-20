@@ -9,7 +9,5 @@ public class SubtitleProfile : Profile
    public SubtitleProfile()
    {
         CreateMap<Subtitle, SubtitleDTO>().ReverseMap();
-        CreateMap<SubtitleCreateDTO, Subtitle>().ReverseMap();
-        CreateMap<SubtitleUpdateDTO, Subtitle>().ReverseMap();
   }
 }

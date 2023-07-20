@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Streetcode.BLL.MediatR.Streetcode.RelatedFigure.Create;
 using Streetcode.BLL.MediatR.Streetcode.RelatedFigure.Delete;
-using Streetcode.BLL.MediatR.Streetcode.RelatedFigure.GetAllPublished;
 using Streetcode.BLL.MediatR.Streetcode.RelatedFigure.GetByStreetcodeId;
 using Streetcode.BLL.MediatR.Streetcode.RelatedFigure.GetByTagId;
 

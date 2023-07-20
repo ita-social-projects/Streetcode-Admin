@@ -33,10 +33,4 @@ public class TagController : BaseApiController
     {
         return HandleResult(await Mediator.Send(new GetTagByTitleQuery(title)));
     }
-
-    [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreateTagDTO tagTitle)
-    {
-        return HandleResult(await Mediator.Send(new CreateTagQuery(tagTitle)));
-    }
 }

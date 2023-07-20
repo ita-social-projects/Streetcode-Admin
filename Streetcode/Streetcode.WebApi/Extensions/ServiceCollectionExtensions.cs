@@ -16,7 +16,6 @@ using Streetcode.DAL.Entities.AdditionalContent.Email;
 using Streetcode.BLL.Interfaces.BlobStorage;
 using Streetcode.BLL.Services.BlobStorageService;
 using Streetcode.BLL.Interfaces.Users;
-using Streetcode.BLL.Services.Users;
 using Microsoft.FeatureManagement;
 using Streetcode.BLL.Interfaces.Payment;
 using Streetcode.BLL.Services.Payment;
@@ -44,7 +43,6 @@ public static class ServiceCollectionExtensions
         services.AddMediatR(currentAssemblies);
 
         services.AddScoped<IBlobService, BlobService>();
-        services.AddScoped<ITokenService, TokenService>();
         services.AddScoped<ILoggerService, LoggerService>();
         services.AddScoped<IEmailService, EmailService>();
         services.AddScoped<IPaymentService, PaymentService>();
@@ -74,32 +72,11 @@ public static class ServiceCollectionExtensions
 
         services.AddHangfireServer();
 
-        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        ValidIssuer = configuration["Jwt:Issuer"],
-                        ValidAudience = configuration["Jwt:Audience"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"])),
-                        ClockSkew = TimeSpan.Zero
-                    };
-                });
-
         var corsConfig = configuration.GetSection("CORS").Get<CorsConfiguration>();
         services.AddCors(opt =>
         {
             opt.AddDefaultPolicy(policy =>
             {
-                // policy.WithOrigins(corsConfig.AllowedOrigins.ToArray());
-                // policy.WithHeaders(corsConfig.AllowedHeaders.ToArray());
-                // policy.WithMethods(corsConfig.AllowedMethods.ToArray());
-                // policy.SetPreflightMaxAge(TimeSpan.FromDays(corsConfig.PreflightMaxAge));
-
                 policy.AllowAnyOrigin()
                       .AllowAnyHeader()
                       .AllowAnyMethod();
@@ -123,31 +100,7 @@ public static class ServiceCollectionExtensions
         services.AddSwaggerGen(opt =>
         {
             opt.SwaggerDoc("v1", new OpenApiInfo { Title = "MyApi", Version = "v1" });
-
             opt.CustomSchemaIds(x => x.FullName);
-            opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
-            {
-                Name = "Authorization",
-                Type = SecuritySchemeType.ApiKey,
-                Scheme = "Bearer",
-                BearerFormat = "JWT",
-                In = ParameterLocation.Header,
-                Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
-            });
-            opt.AddSecurityRequirement(new OpenApiSecurityRequirement
-            {
-                {
-                    new OpenApiSecurityScheme
-                    {
-                        Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            }
-                    },
-                    Array.Empty<string>()
-                }
-            });
         });
     }
 

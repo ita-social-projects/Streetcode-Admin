@@ -1,15 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Streetcode.BLL.DTO.Partners;
-using Streetcode.BLL.DTO.Partners.Create;
 using Streetcode.BLL.MediatR.Partners.Create;
 using Streetcode.BLL.MediatR.Partners.GetAll;
 using Streetcode.BLL.MediatR.Partners.GetAllPartnerShort;
 using Streetcode.BLL.MediatR.Partners.GetById;
 using Streetcode.BLL.MediatR.Partners.GetByStreetcodeId;
-using Streetcode.BLL.MediatR.Partners.GetByStreetcodeIdToUpdate;
-using Streetcode.DAL.Entities.Partners;
-using Streetcode.DAL.Enums;
-using Streetcode.WebApi.Attributes;
 
 namespace Streetcode.WebApi.Controllers.Partners;
 
@@ -37,12 +32,6 @@ public class PartnersController : BaseApiController
     public async Task<IActionResult> GetByStreetcodeId([FromRoute] int streetcodeId)
     {
         return HandleResult(await Mediator.Send(new GetPartnersByStreetcodeIdQuery(streetcodeId)));
-    }
-
-    [HttpGet("{streetcodeId:int}")]
-    public async Task<IActionResult> GetPartnersToUpdateByStreetcodeId([FromRoute] int streetcodeId)
-    {
-        return HandleResult(await Mediator.Send(new GetPartnersToUpdateByStreetcodeIdQuery(streetcodeId)));
     }
 
     [HttpPost]
