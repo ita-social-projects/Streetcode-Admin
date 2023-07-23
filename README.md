@@ -139,11 +139,6 @@ Run the Streetcode project in any other profile but "Local" and enter http://loc
 
 ---
 
-## Documentation
-Learn more about our documentation <a href="https://github.com/ita-social-projects/StreetCode/wiki" target="_blank">*here*</a>.
-
----
-
 ## Contributing
 
 ### Gitflow
@@ -176,7 +171,7 @@ For example, `fix typo` or `increase rate limit`. Note: you don't need to commit
 
 #### Step 6
 
-- 🔃 Create a new pull request using <a href="https://github.com/ita-social-projects/StreetCode_Client/pulls" target="_blank">*this link*</a>.
+- 🔃 Create a new pull request using <a href="https://github.com/ita-social-projects/Streetcode_Client-Admin.git" target="_blank">*this link*</a>.
 
 #### Step 7
 
