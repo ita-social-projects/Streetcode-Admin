@@ -17,7 +17,6 @@ var app = builder.Build();
 
 if (app.Environment.EnvironmentName == "Local")
 {
-    await app.SeedDataAsync();
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
 }
@@ -28,6 +27,7 @@ else
 
 await app.ApplyMigrations();
 
+// await app.SeedDataAsync(); // uncomment for seeding data in local
 app.UseCors();
 app.UseHttpsRedirection();
 app.UseRouting();
