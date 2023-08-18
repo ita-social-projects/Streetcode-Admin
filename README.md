@@ -9,12 +9,11 @@ Front-end part: https://github.com/ita-social-projects/streetcode-client_Admin-F
 >### **Mission**
 >To fill the gaps in the historical memory of Ukrainians.
 
-[![Build Status](https://img.shields.io/travis/ita-social-projects/StreetCode/master?style=flat-square)](https://travis-ci.org/github/ita-social-projects/StreetCode)
-[![Coverage Status](https://img.shields.io/gitlab/coverage/ita-social-projects/StreetCode/master?style=flat-square)](https://coveralls.io)
-[![Github Issues](https://img.shields.io/github/issues/ita-social-projects/StreetCode?style=flat-square)](https://github.com/ita-social-projects/StreetCode/issues)
-[![Pending Pull-Requests](https://img.shields.io/github/issues-pr/ita-social-projects/StreetCode?style=flat-square)](https://github.com/ita-social-projects/StreetCode/pulls)
+[![Build Status](https://img.shields.io/travis/ita-social-projects/Streetcode-Admin/master?style=flat-square)](https://travis-ci.org/github/ita-social-projects/Streetcode-Admin)
+[![Coverage Status](https://img.shields.io/gitlab/coverage/ita-social-projects/Streetcode-Admin/master?style=flat-square)](https://coveralls.io)
+[![Github Issues](https://img.shields.io/github/issues/ita-social-projects/Streetcode-Admin?style=flat-square)](https://github.com/ita-social-projects/Streetcode-Admin/issues)
+[![Pending Pull-Requests](https://img.shields.io/github/issues-pr/ita-social-projects/Streetcode-Admin?style=flat-square)](https://github.com/ita-social-projects/Streetcode-Admin/pulls)
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ita-social-projects_StreetCode&metric=alert_status)](https://sonarcloud.io/project/overview?id=ita-social-projects_StreetCode) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ita-social-projects_StreetCode&metric=coverage)](https://sonarcloud.io/dashboard?id=ita-social-projects_StreetCode) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ita-social-projects_StreetCode&metric=bugs)](https://sonarcloud.io/dashboard?id=ita-social-projects_StreetCode) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ita-social-projects_StreetCode&metric=code_smells)](https://sonarcloud.io/dashboard?id=ita-social-projects_StreetCode) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ita-social-projects_StreetCode&metric=security_rating)](https://sonarcloud.io/dashboard?id=ita-social-projects_StreetCode)
 ---
 
 ## Table of Contents 
