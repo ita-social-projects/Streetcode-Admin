@@ -2,7 +2,7 @@
 
 # Streetcode
 This is a Back-end part of our Streetcode project.
-Front-end part: https://github.com/ita-social-projects/StreetCode_Client
+Front-end part: https://github.com/ita-social-projects/streetcode-client_Admin-Full
 >### **Vision**
 >The largest platform about the history of Ukraine, built in the space of cities.
 
